@@ -47,4 +47,23 @@ class BoardTest extends TestCase
         $result = $board->callShot($location);
         $this->assertInstanceOf(ShotResultHit::class, $result);
     }
+
+    /**
+     * @covers \Battleship\Model\Board
+     * @covers \Battleship\Factory\ShipFactory
+     * @covers \Battleship\Model\Location
+     * @covers \Battleship\Model\Ship
+     */
+    public function testDestroyerIsPositioned()
+    {
+        $board = new Board();
+        $locationStart = new Location('D-4');
+        $locationEnd = new Location('D-8');
+
+        $ship = ShipFactory::build(Ship::TYPE_BATTLESHIP);
+        $board->positionShip($ship, $locationStart, $locationEnd);
+
+        $this->assertSame($locationStart, $ship->getLocationStart());
+        $this->assertSame($locationEnd, $ship->getLocationEnd());
+    }
 }
