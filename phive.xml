@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phive xmlns="https://phar.io/phive">
+  <phar name="phpunit" version="^7.2" installed="7.2.5" location="./tools/phpunit.phar" copy="true"/>
+  <phar name="phpab" version="^1.24.1" installed="1.24.1" location="./tools/phpab" copy="true"/>
+</phive>
