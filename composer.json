@@ -1,0 +1,11 @@
+{
+    "name": "cristianradulescu/workshop-tdd",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Battleship\\": "src",
+            "Battleship\\Tests\\": "tests"
+        }
+    }
+}
